@@ -1,10 +1,10 @@
 <template>
   <div id="nav">
-    <router-link id="logo" to="/">Travel-App</router-link>
+    <router-link id="logo" to="/">Travel</router-link>
     <router-link
       v-for="destination in destinations"
       :key="destination.id"
-      :to="{ name: 'destination.show', params: { id: destination.id, slug: destination.slug } }"
+      :to="{ name: 'destination', params: { id: destination.id, slug: destination.slug } }"
     >
       {{ destination.name }}
     </router-link>
