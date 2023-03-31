@@ -5,6 +5,7 @@
     <router-link :to="{ name: 'invoices' }">
       <button>Invoices</button>
     </router-link>
+    <button>click</button>
   </div>
 </template>
 
