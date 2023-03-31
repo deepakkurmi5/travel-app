@@ -18,8 +18,7 @@ export default {
   methods: {
     logout() {
       window.user = null
-      const redirectPath = this.$router.query.redirect || '/protected'
-      this.$router.push(redirectPath)
+      this.$router.push({ name: 'protected' })
     }
   }
 }

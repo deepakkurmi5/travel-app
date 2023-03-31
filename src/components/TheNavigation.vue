@@ -9,7 +9,6 @@
       {{ destination.name }}
     </AppLink>
     <AppLink :to="{ name: 'protected' }">Dashboard</AppLink>
-    <AppLink to="https://router.vuejs.org/installation.html">vue</AppLink>
   </div>
 </template>
 

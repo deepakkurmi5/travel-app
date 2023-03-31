@@ -1,7 +1,12 @@
 <template>
   <TheNavigation />
   <div class="container">
-    <router-view v-slot="{ Component }">
+    <router-view v-slot="{ Component }" class="view left-sidebar" name="LeftSidebar">
+      <Transition name="fade" mode="out-in">
+        <component :is="Component" :key="$route.path"></component>
+      </Transition>
+    </router-view>
+    <router-view v-slot="{ Component }" class="view main-view">
       <Transition name="fade" mode="out-in">
         <component :is="Component" :key="$route.path"></component>
       </Transition>
@@ -32,5 +37,16 @@ export default {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+.container {
+  display: flex;
+}
+
+.left-sidebar {
+  width: 28%;
+}
+
+.main-view {
+  width: 100%;
 }
 </style>
